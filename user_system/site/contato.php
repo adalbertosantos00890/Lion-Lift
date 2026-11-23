@@ -1,0 +1,160 @@
+<?php require_once __DIR__ . '/../auth.php'; iniciar_sessao(); ?>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato — Lion Lift | Cestas Aéreas</title>
+  <meta name="description" content="Entre em contato para solicitar orçamento de cesta aérea.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+ 
+  <header class="site-header">
+    <div class="container">
+      <a href="index.php" class="brand" aria-label="Lion Lift — página inicial">
+        <img src="imagens/Logo.png" alt="" class="brand-logo">
+        <span class="brand-name">Lion <span>Lift</span></span>
+      </a>
+
+      <nav class="nav" id="site-nav">
+        <ul class="nav-links">
+          <li><a href="index.php">Início</a></li>
+          <li><a href="cesta-aerea.php">Cesta Aérea</a></li>
+          <li><a href="faq.php">FAQ</a></li>
+          <li><a href="localizacao.php">Localização</a></li>
+          <li><a href="contato.php" aria-current="page">Contato</a></li>
+        </ul>
+        <a href="orcamento.php" class="btn btn-primary nav-cta">Solicitar orçamento</a>
+<?php render_conta_nav('../'); ?>
+      </nav>
+
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    
+    <section class="page-header">
+      <div class="container">
+        <span class="eyebrow">Lion Lift</span>
+        <h1>Entre em contato</h1>
+        <p class="lede">Envie sua mensagem ou tire dúvidas sobre a cesta aérea. Para pedir um orçamento, use a página <a href="orcamento.php" class="text-link">Solicitar orçamento</a>.</p>
+      </div>
+    </section>
+
+    
+    <section class="section" style="padding-top: 16px;">
+      <div class="container contact-grid">
+
+        <form class="form-panel contact-form" data-validar data-endpoint="" novalidate>
+          
+          <p class="form-required-note">Campos marcados com <span class="req-mark" aria-hidden="true">*</span> são obrigatórios.</p>
+
+          <div class="form-row">
+            <label for="nome">Nome <span class="req-mark" aria-hidden="true">*</span></label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" autocomplete="name" required data-validate="name" data-msg-required="Informe o seu nome.">
+          </div>
+          <div class="form-row">
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" autocomplete="tel" inputmode="tel" data-validate="phone">
+          </div>
+          <div class="form-row">
+            <label for="email">E-mail <span class="req-mark" aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" autocomplete="email" required data-validate="email" data-msg-required="Informe o seu e-mail.">
+          </div>
+          <div class="form-row">
+            <label for="mensagem">Mensagem <span class="req-mark" aria-hidden="true">*</span></label>
+            <textarea id="mensagem" name="mensagem" placeholder="Descreva o que você precisa" required data-msg-required="Escreva a sua mensagem."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+          <p class="form-status" role="status"></p>
+          <p class="form-note">Formulário ilustrativo — o envio ainda não está conectado nesta versão do protótipo.</p>
+        </form>
+
+        <aside class="contact-aside">
+          <div class="contact-card">
+            <h3>Informações</h3>
+            <p>Telefone: <span class="placeholder-value">(19) 99943-4699</span></p>
+            <p>E-mail: <span class="placeholder-value">juniorcesar.clemente@gmail.com</span></p>
+            <p>Endereço: <span class="placeholder-value">Rua Virgínia Pratta Gregolin, 575
+Piracicaba, SP</span></p>
+          </div>
+
+          <a class="contact-card contact-card-link location-card" href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Virg%C3%ADnia+Pratta+Gregolin%2C+575%2C+Piracicaba%2C+SP%2C+Brasil" target="_blank" rel="noopener noreferrer">
+            <div class="contact-card-title">
+              <span class="contact-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              </span>
+              <h3>Localização</h3>
+            </div>
+            <p>Rua Virgínia Pratta Gregolin, 575 — Piracicaba, SP</p>
+            <span class="card-action">Abrir no Google Maps <span aria-hidden="true">→</span></span>
+          </a>
+
+          <div class="contact-card whatsapp">
+            <h3>WhatsApp</h3>
+            <p>Fale diretamente pelo WhatsApp: <span class="placeholder-value"><a href="https://wa.me/5519999434699?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20as%20cestas%20a%C3%A9reas." target="_blank" rel="noopener noreferrer">Clique Aqui</a></span></p>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+
+    
+    <section class="section section--alt map-section" id="onde-estamos">
+      <div class="container">
+        <div class="section-head">
+          <h2>Onde estamos</h2>
+          <p class="lede">Confira no mapa a localização da Lion Lift em Piracicaba, SP.</p>
+        </div>
+
+       
+        <div class="img-placeholder-frame map-frame">
+          <iframe
+            title="Mapa com a localização da Lion Lift"
+            src="https://www.google.com/maps?q=Rua+Virg%C3%ADnia+Pratta+Gregolin%2C+575%2C+Piracicaba%2C+SP%2C+Brasil&amp;output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+
+        <div class="map-footer">
+          <p class="map-address"><strong>Endereço:</strong> Rua Virgínia Pratta Gregolin, 575 — Piracicaba, SP</p>
+          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Virg%C3%ADnia+Pratta+Gregolin%2C+575%2C+Piracicaba%2C+SP%2C+Brasil" target="_blank" rel="noopener noreferrer">Abrir no Google Maps</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+ 
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-brand-row">
+          <img src="imagens/Logo.png" alt="" class="footer-logo">
+          <span class="brand-name">Lion <span>Lift</span></span>
+        </div>
+        <p class="footer-tagline">Fabricação e instalação de cestas aéreas.</p>
+      </div>
+      <div class="footer-contact">
+        <span>Telefone: <span class="placeholder-value">(19) 99943-4699</span></span>
+        <span>E-mail: <span class="placeholder-value">juniorcesar.clemente@gmail.com</span></span>
+        <span>Endereço: <a class="placeholder-value" href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Virg%C3%ADnia+Pratta+Gregolin%2C+575%2C+Piracicaba%2C+SP%2C+Brasil" target="_blank" rel="noopener noreferrer">Rua Virgínia Pratta Gregolin, 575
+Piracicaba, SP</a></span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
