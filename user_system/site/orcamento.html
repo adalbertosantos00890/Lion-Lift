@@ -13,7 +13,7 @@
 </head>
 <body>
 
-  <!-- ====================== HEADER ====================== -->
+  
   <header class="site-header">
     <div class="container">
       <a href="index.html" class="brand" aria-label="Lion Lift — página inicial">
@@ -44,7 +44,7 @@
 
   <main>
 
-    <!-- ====================== TÍTULO ====================== -->
+    
     <section class="page-header">
       <div class="container">
         <span class="eyebrow">Lion Lift</span>
@@ -53,31 +53,17 @@
       </div>
     </section>
 
-    <!-- ====================== FORMULÁRIO ====================== -->
+    
     <section class="section" style="padding-top: 16px;">
       <div class="container">
 
-        <!-- ==============================================================
-             INTEGRAÇÃO COM PHP / BANCO DE DADOS — PENDENTE
-             O formulário ainda NÃO está conectado ao sistema de recebimento.
-             Para conectar:
-               1) Coloque o endereço do PHP em data-endpoint (ex.: "receber_orcamento.php").
-               2) O PHP recebe via POST os campos: nome, empresa, telefone, email,
-                  veiculo_disponivel (sim/nao), marca, modelo, ano, cidade_estado,
-                  servico, finalidade, descricao.
-               3) O PHP grava no banco e responde em JSON:
-                    sucesso: {"sucesso": true, "id": 123}   (id = número real do banco)
-                    erro:    {"sucesso": false, "mensagem": "texto opcional"}
-               4) O modal de confirmação (id="confirmacao-orcamento", no fim da página)
-                  só abre após "sucesso": true e exibe o "id" retornado.
-             Detalhes: script.js, seções 5 e 6.
-             ============================================================== -->
+       
         <form class="form-panel form-panel--wide quote-form" id="form-orcamento"
               method="post" data-validar data-endpoint="" data-confirmacao="confirmacao-orcamento" novalidate>
 
-          <p class="form-required-note">Campos marcados com <span class="req-mark" aria-hidden="true">*</span> são obrigatórios. Não é necessário informar CPF, placa, chassi ou outros documentos.</p>
+          <p class="form-required-note">Campos marcados com <span class="req-mark" aria-hidden="true">*</span> são obrigatórios.</p>
 
-          <!-- SEÇÃO 1 -->
+         
           <div class="form-section" role="group" aria-labelledby="sec-solicitante">
             <h2 class="form-section-title" id="sec-solicitante"><span class="form-section-num">01</span> Dados do solicitante</h2>
             <div class="form-grid">
@@ -100,7 +86,7 @@
             </div>
           </div>
 
-          <!-- SEÇÃO 2 -->
+         
           <div class="form-section" role="group" aria-labelledby="sec-veiculo">
             <h2 class="form-section-title" id="sec-veiculo"><span class="form-section-num">02</span> Informações do veículo</h2>
             <div class="form-grid">
@@ -131,7 +117,7 @@
             <p class="field-hint">Marca, modelo e ano são obrigatórios apenas se o veículo já estiver disponível.</p>
           </div>
 
-          <!-- SEÇÃO 3 -->
+         
           <div class="form-section" role="group" aria-labelledby="sec-detalhes">
             <h2 class="form-section-title" id="sec-detalhes"><span class="form-section-num">03</span> Detalhes do orçamento</h2>
             <div class="form-grid">
@@ -169,7 +155,7 @@
 
   </main>
 
-  <!-- ====================== FOOTER ====================== -->
+  
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand">
